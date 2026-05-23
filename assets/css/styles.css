@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "lat-men prin-men"
+        "foot foot";
+}
+
+.header {
+    grid-area: header;
+    background-color: #1e3a5f;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.lat-men {
+    grid-area: lat-men;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: #e8e8e8;
+}
+
+.lat-men__titulo {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.lat-men__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lat-men__lista li {
+    font-size: 0.95rem;
+}
+
+.prin-men {
+    grid-area: prin-men;
+    padding: 1.5rem;
+    background-color: #d4d4d4;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.tarjeta__img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta__nombre {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+}
+
+.tarjeta__precio {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta__btn {
+    width: 100%;
+    margin-top: auto;
+    padding: 0.6rem;
+    border: none;
+    background-color: #1e3a5f;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.tarjeta__btn:hover {
+    background-color: #2a4f7a;
+}
+
+.foot {
+    grid-area: foot;
+    text-align: center;
+    padding: 0.75rem;
+    color: #888;
+    font-size: 0.85rem;
+    background-color: #e8e8e8;
+}
